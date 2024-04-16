@@ -18,9 +18,6 @@ function UserProfile() {
                             </div>
                             <div className="col-md-6 col-sm-12">
                                 <h1>Saurabh Sharma</h1>
-
-                                
-
                                 <h5 className='text-primary'>Graphic Design</h5>
                                 <p>  <i class="fa fa-file-text-o" aria-hidden="true"> &nbsp;</i>Send Message</p>
                                 <button className="btn btn-primary my-3">Upload Reasume</button>

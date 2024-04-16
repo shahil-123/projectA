@@ -1,8 +1,13 @@
 import React from 'react';
+
 // import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+  const login = () => {
+    navigate("/Login")
+  }
   return (
     <div>
 
@@ -34,9 +39,10 @@ function Header() {
                 </li>
               </ul>
 
-              <button class="btn btn-outline-success  my-2  mx-4 my-sm-0" type="submit">Employer Login</button>
-              <a href="./Login" target="_blank" rel="noopener noreferrer" className="custom-link"> <button class="btn btn-primary my-2 mx-4 my-sm-0" type="submit">Candidate Login</button></a>
-             
+              <button class="btn btn-outline-success  my-2  mx-4 my-sm-0" type="submit" onClick={() => login()}>Employer Login</button>
+
+              <button class="btn btn-primary my-2 mx-4 my-sm-0" type="submit" onClick={() => login()}>Candidate Login</button>
+
             </div>
           </div>
         </div>

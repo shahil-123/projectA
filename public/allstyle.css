@@ -23,6 +23,11 @@
     width:240px;
     border-radius: 50%;
     border: 10px solid blue;
+    text-align: center !important;
+    margin: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    justify-content: center;
   }
   /* .profile-img{
     height: 90% !important;
@@ -53,6 +58,10 @@
     background-color: #c8e6f2;
 
   }
+  .player{
+    aspect-ratio: 16/9;
+    width: 100%;
+  }
   footer{
     background-color: #202051;
   }
@@ -69,11 +78,42 @@
   .fa{
     font-size: 25px;
   }
+  .company-background{
+    background-color: #c8e6f2;
+  }
+  .employee-card{
+    border-radius: 12px;
+    border: none;
+    height: 120px !important;
+    width: 130px !important;
+  }
+  .employee-card2{
+    border-radius: 12px;
+    border: none;
+    height: 80px !important;
+    width: 100px !important;
+  }
+  .img-slider{
+    text-align: center!important;
+  }
+  .img-slider:hover{
+background-color: #2a2acc;
+color: white;
+  }
+  .img-slider img{
+    border-radius: 50%;
+    height: 200px;
+  width: 200px;
+  text-align: center!important;
+  }
+  .slick-slide img{
+    display: initial!important;
+  }
   @media (max-width: 768px) {
-  #video-sec{
+  /* #video-sec{
     width:"300" !important;
     height:"225" !important;
-  }
+  } */
   .find-job{
     height: 18rem;
     background-color: #c8e6f2;

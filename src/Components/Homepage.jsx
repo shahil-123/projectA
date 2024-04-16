@@ -1,13 +1,20 @@
-import React from "react";
+// import React from "react";
 // import { FindJob1 } from './FindJob1';
-function Homepage() {
+import {useNavigate} from "react-router-dom";
+
+function Homepage (){
+const navigate = useNavigate();
+  const CreateResumeBtn = () => {
+    // alert("hiiiii");
+    navigate("/findjob")
+  }
   return (
     <div>
       {/* <FindJob1 /> */}
       <section>
         <div className="container ">
           <div className="row d-flex align-items-center">
-            <div className="col-md-6 col-sm-12">
+            <div className="col-md-6 col-sm-12 mt-5">
               <h1>Let us Find a job for you</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
@@ -48,7 +55,7 @@ function Homepage() {
                 </p>
               </div>
               <div className="col-md-6 col-sm-12 text-center">
-                <div className="btn btn-success btn-circle">
+                <div className="btn btn-success btn-circle" onClick={()=>CreateResumeBtn()}>
                   Create Your Resume
                 </div>
               </div>
@@ -148,10 +155,14 @@ function Homepage() {
         <div className="container-fluid">
           <div className="container text-center">
             <h2 className="text-center pb-4">How Company Work</h2>
-            <iframe
+            <div className="row">
+              <div className="col-md-2 col-sm-12">
+
+              </div>
+              <div className="col-md-8 col-sm-12">
+              <iframe
               id="video-sec"
-              width="760"
-              height="415"
+             className="player"
               src="https://www.youtube.com/embed/jDLuJLoaA_g?si=Q9U5CfwZVmlPbw2q"
               title="YouTube video player"
               frameborder="0"
@@ -159,6 +170,12 @@ function Homepage() {
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
+              </div>
+              <div className="col-md-2 col-sm-12">
+
+              </div>
+            </div>
+           
           </div>
         </div>
       </section>
@@ -215,9 +232,9 @@ function Homepage() {
           <div className="col-md-1 col-sm-12"></div>
         </div>
       </section>
-      
-      
-      
+
+
+
     </div>
   );
 }
