@@ -8,28 +8,31 @@ import Login from './Components/Login';
 import UserProfile from './Components/UserProfile';
 import CompanyDetails from './Components/CompanyDetails';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+import ClientReview from './Components/ClientReview';
 
 function App() {
   return (
-   <>
-  <Router>
-      <div className="App">
-        <Header />
-     
-        <main>
-          <Routes>
-          <Route path="/" element={<Homepage/>}/>
-          <Route path="/findjob" element={<FindJob1/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/userprofile" element={<UserProfile/>}/>
-          <Route path="/companydetails" element={<CompanyDetails/>}/>
-          </Routes>
-        </main>
+    <>
+      <Router>
+        <div className="App">
+          <Header />
 
-        <Footer />
-      </div>
-    </Router>
-    {/* <BrowserRouter>
+          <main>
+            <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="/findjob" element={<FindJob1 />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/userprofile" element={<UserProfile />} />
+              <Route path="/companydetails" element={<CompanyDetails />} />
+              <Route path="/clientreview" element={<ClientReview />} />
+              {/* <Route path="/clientreview" element={<ClientReview />} */}
+          </Routes>
+          </main>
+
+          <Footer />
+        </div>
+      </Router>
+      {/* <BrowserRouter>
     <Routes>
     <Header/>
       <Switch>
@@ -40,8 +43,8 @@ function App() {
     </Routes>
    
     </BrowserRouter> */}
-  
-   </>
+
+    </>
   );
 }
 

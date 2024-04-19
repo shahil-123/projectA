@@ -1,9 +1,21 @@
 // import React from "react";
 // import { FindJob1 } from './FindJob1';
-import {useNavigate} from "react-router-dom";
+import React, { Component } from 'react';
 
-function Homepage (){
-const navigate = useNavigate();
+import Slider from "react-slick";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useNavigate } from "react-router-dom";
+
+function Homepage() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+  const navigate = useNavigate();
   const CreateResumeBtn = () => {
     // alert("hiiiii");
     navigate("/findjob")
@@ -55,7 +67,7 @@ const navigate = useNavigate();
                 </p>
               </div>
               <div className="col-md-6 col-sm-12 text-center">
-                <div className="btn btn-success btn-circle" onClick={()=>CreateResumeBtn()}>
+                <div className="btn btn-success btn-circle" onClick={() => CreateResumeBtn()}>
                   Create Your Resume
                 </div>
               </div>
@@ -160,22 +172,22 @@ const navigate = useNavigate();
 
               </div>
               <div className="col-md-8 col-sm-12">
-              <iframe
-              id="video-sec"
-             className="player"
-              src="https://www.youtube.com/embed/jDLuJLoaA_g?si=Q9U5CfwZVmlPbw2q"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+                <iframe
+                  id="video-sec"
+                  className="player"
+                  src="https://www.youtube.com/embed/jDLuJLoaA_g?si=Q9U5CfwZVmlPbw2q"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </div>
               <div className="col-md-2 col-sm-12">
 
               </div>
             </div>
-           
+
           </div>
         </div>
       </section>
@@ -233,7 +245,172 @@ const navigate = useNavigate();
         </div>
       </section>
 
+      <section className='client-review-home-page'>
+        <div className="container-fluid">
+          <div className="container">
+            <div className="text-center pt-5">
+              <h2>What Client Says</h2>
 
+            </div>
+
+          </div>
+        </div>
+        <Slider {...settings}>
+          <div>
+            <div className="container pt-2">
+              <div className="card client-review-card-home">
+                <div className="card-body ">
+                  <div className="quote-sec text-center pb-3">
+                    <i class="fa fa-quote-left quote-green" aria-hidden="true"></i>
+                  </div>
+
+
+                  <div className="text-center justify-content-center m-auto">
+                    <div className="d-flex py-3 ">
+
+                      <img src="/assets/images/client1.jpeg" className='img-fluid client-review-img-home' alt="" />
+                      &nbsp;&nbsp;&nbsp;
+                      <div className="cheild-client-sec">
+                        <h5>Zolton Neemith</h5>
+                        <p>CEO OF XYZ LAB</p>
+                        <div className="d-flex">
+                          <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                          <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                          <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                          <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                          <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp; &nbsp;
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Accusantium, itaque reprehenderit nesciunt et cumque veritatis
+                    voluptates doloribus maiores blanditiis pariatur sint.
+                    Atque nihil saepe labore cupiditate reprehenderit amet
+                    quos consequatur distinctio aperiam maxime! &nbsp; &nbsp;
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>   <div className="container pt-2">
+            <div className="card client-review-card-home">
+              <div className="card-body ">
+                <div className="quote-sec text-center pb-3">
+                  <i class="fa fa-quote-left quote-green" aria-hidden="true"></i>
+                </div>
+
+
+                <div className="text-center justify-content-center m-auto">
+                  <div className="d-flex py-3 ">
+
+                    <img src="/assets/images/client2.jpeg" className='img-fluid client-review-img-home' alt="" />
+                    &nbsp;&nbsp;&nbsp;
+                    <div className="cheild-client-sec">
+                      <h5>William Henery</h5>
+                      <p>CEO OF XYZ LAB</p>
+                      <div className="d-flex">
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp; &nbsp;
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusantium, itaque reprehenderit nesciunt et cumque veritatis
+                  voluptates doloribus maiores blanditiis pariatur sint.
+                  Atque nihil saepe labore cupiditate reprehenderit amet
+                  quos consequatur distinctio aperiam maxime! &nbsp; &nbsp;
+                  <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div>             <div className="container pt-2">
+            <div className="card client-review-card-home">
+              <div className="card-body ">
+                <div className="quote-sec text-center pb-3">
+                  <i class="fa fa-quote-left quote-green" aria-hidden="true"></i>
+                </div>
+
+
+                <div className="text-center justify-content-center m-auto">
+                  <div className="d-flex py-3 ">
+
+                    <img src="/assets/images/client3.jpeg" className='img-fluid client-review-img-home' alt="" />
+                    &nbsp;&nbsp;&nbsp;
+                    <div className="cheild-client-sec">
+                      <h5>Joseph Dumont</h5>
+                      <p>CEO OF XYZ LAB</p>
+                      <div className="d-flex">
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp; &nbsp;
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusantium, itaque reprehenderit nesciunt et cumque veritatis
+                  voluptates doloribus maiores blanditiis pariatur sint.
+                  Atque nihil saepe labore cupiditate reprehenderit amet
+                  quos consequatur distinctio aperiam maxime! &nbsp; &nbsp;
+                  <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div>             <div className="container pt-2">
+            <div className="card client-review-card-home">
+              <div className="card-body ">
+                <div className="quote-sec text-center pb-3">
+                  <i class="fa fa-quote-left quote-green" aria-hidden="true"></i>
+                </div>
+
+
+                <div className="text-center justify-content-center m-auto">
+                  <div className="d-flex py-3 ">
+
+                    <img src="/assets/images/emp5.jpeg" className='img-fluid client-review-img-home' alt="" />
+                    &nbsp;&nbsp;&nbsp;
+                    <div className="cheild-client-sec">
+                      <h5>Lyraa Neemith</h5>
+                      <p>CEO OF XYZ LAB</p>
+                      <div className="d-flex">
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                        <i class="fa fa-star" aria-hidden="true"></i>&nbsp;
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p><i class="fa fa-quote-left" aria-hidden="true"></i>&nbsp; &nbsp;
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusantium, itaque reprehenderit nesciunt et cumque veritatis
+                  voluptates doloribus maiores blanditiis pariatur sint.
+                  Atque nihil saepe labore cupiditate reprehenderit amet
+                  quos consequatur distinctio aperiam maxime! &nbsp; &nbsp;
+                  <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </Slider>
+      </section>
 
     </div>
   );
